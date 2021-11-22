@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  ztdns:
+    image: ghcr.io/philipnordmann/ztdns:latest
+    environment:
+      - ZEROTIER_TOKEN=<your zerotier api token>
+      - ZEROTIER_NETWORK_ID=<your zerotier network id>
+      - HETZNER_TOKEN=<your hetzner api token>
+      - HETZNER_ZONE_ID=<your hertzner dns zone id>
+    restart: unless-stopped
